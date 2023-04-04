@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Moja Strona</title>
+	<style>
+		body {
+			background-color: black;
+			color: white;
+			transition: background-color 1s ease-in-out;
+		}
+
+		.gold {
+			background-color: gold;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.tile {
+			display: inline-block;
+			width: calc(33.33% - 10px);
+			margin: 10px;
+			padding: 20px;
+			border-radius: 10px;
+			background-color: #333;
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
+			text-align: center;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		.tile:hover {
+			transform: scale(1.1);
+			box-shadow: 0 0 20px rgba(0,0,0,0.5);
+		}
+
+		.tile img {
+			max-width: 100%;
+			border-radius: 5px;
+		}
+
+		.tile h2 {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="tile">
+			<img src="https://via.placeholder.com/400x400" alt="Zdjęcie 1">
+			<h2>Zdjęcie 1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</div>
+		<div class="tile">
+			<img src="https://via.placeholder.com/400x400" alt="Zdjęcie 2">
+			<h2>Zdjęcie 2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</div>
+		<div class="tile">
+			<img src="https://via.placeholder.com/400x400" alt="Zdjęcie 3">
+			<h2>Zdjęcie 3</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</div>
+	</div>
+
+	<script>
+		window.addEventListener('scroll', () => {
+			const body = document.querySelector('body');
+			if (window.scrollY > 0) {
+				body.classList.add('gold');
+			} else {
+				body.classList.remove('gold');
+			}
+		});
+	</script>
+</body>
+</html>
